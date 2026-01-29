@@ -148,22 +148,34 @@ main img.pequena{
     margin: auto;
 }
 
-div.video{
+div.video {
     background-color: var(--cor5);
     margin: 0px -20px 30px -20px;
     padding: 20px;
-    padding: 59%;
     position: relative;
+    height: 0;
+    overflow: hidden;
 }
 
-div.video > iframe{
+div.video > iframe {
     position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
+/* Para proporção 16:9 */
+div.video {
+    padding-bottom: 56.25%; /* 16:9 */
+}
+
+/* Para proporção 4:3 (se necessário) */
+/*
+div.video {
+    padding-bottom: 75%; /* 4:3 */
+*/
 aside{
     background-color: var(--cor1);
     padding: 10px;
